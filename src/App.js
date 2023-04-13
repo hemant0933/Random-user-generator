@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{ useEffect, useState} from 'react'
+import UserCard from './components/UserCard';
+import axios from 'axios';
 
 function App() {
+  const [details,setDetails] = useState({});
+  const fetchUsers = async () => {
+    const {data} = await axios.get("https://randomuser.me/api")
+    console.log(data)
+    const details = data.results[0]
+    setDetails(details);
+  }
+  
+  useEffect(() => {
+    fetchUsers()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-wrapper'>
+        <UserCard details= {details}/>
+        <button className='change-Btn btn btn-danger w-50 mt-3' onClick={fetchUsers}>Random User</button>
     </div>
   );
 }
