@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body{
+  background: linear-gradient(to right, #E8A0BF,#0E8388);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +18,7 @@ body{
   flex-direction: column;
 }
 .wrapper{
-  width: 60vw;
-  background-color: bisque;
+  border-radius: 10px;
+  width: 25vw;
+  background-color: #B4E4FF;
 }
