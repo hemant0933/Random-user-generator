@@ -18,7 +18,7 @@ const UserCard = ({details}) => {
                         <img src={details.picture?.large}  width={"50px"} className='card-img-top rounded-circle' alt=""/>
                         <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                             <h6 className='card-title mt-4'>{details.name?.title}. {details.name?.first} {details.name?.last}</h6>
-                            <p class="card-text"><GoLocation/> {details.location.city}</p>
+                            {/* <p class="card-text"><GoLocation/> {details.location.city}</p> */}
                             <p class="card-text"><FcCellPhone/> {details.cell}</p>
                             <p class="card-text"><FiMail/> {details.email}</p>
                         </div>
