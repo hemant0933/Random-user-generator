@@ -7,14 +7,12 @@ function App() {
   const [details,setDetails] = useState({});
   const fetchUsers = async () => {
     const {data} = await axios.get("https://randomuser.me/api")
-    console.log(data)
+    // console.log(data)
     const details = data.results[0]
     setDetails(details);
   }
   
-  useEffect(() => {
-    fetchUsers()
-  }, [])
+  useEffect(() => { fetchUsers() }, [])
 
   return (
     <div className='main-wrapper'>

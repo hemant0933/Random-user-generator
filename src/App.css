@@ -20,5 +20,23 @@ body{
 .wrapper{
   border-radius: 10px;
   width: 25vw;
-  background-color: #B4E4FF;
+  border: 10px groove rgb(185, 183, 183);
+}
+.image-wrapper{
+  border: 1px solid #ddd;
+  image-orientation: flip;
+  image-rendering: optimizeQuality;
+}
+.image-wrapper:hover {
+  box-shadow: 0 0 10px 8px rgba(17, 17, 18, 0.5);
+}
+.name-title{
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: 600;
+}
+.card-text{
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: 400;
 }
